@@ -1,17 +1,45 @@
 body {
-    height: 100%;
-    width: 100%;
+    line-height: 1;
   }
 
-  .container {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      text-align: center;
+  .flex-container {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(rgba(96, 79, 252, 0.082), white);
   }
-  .container div{
-    width: 6vw;
-    height: 6vh;
-    border: 1px solid blue;
-    background-color: rgb(187, 173, 201);
+  .board {
+    width: 80%;
+    height: 80%;
+    display: grid;
+    background-color: white;
+
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 300px;
+    min-height: 300px;
+    width: 60vw;
+    height: 60vw;
+    max-width: 600px;
+    max-height: 600px;
+  }
+  .title {
+    display: flex;
+    justify-content: center;
+  }
+
+  button {
+    padding: 0.3em 1.2em;
+    margin: 0 0.3em 0.3em 0;
+    border-radius: 2em;
+    text-decoration: none;
+    font-weight: 600;
+    text-align: center;
+    transition: all 0.2s;
   }

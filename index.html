@@ -1,34 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="style.css" rel="stylesheet" type="text/css" />
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
 
+        <div class="flex-container">
+            <div class="title"><h1>Etch A Sketch</h1></div>
+            <div class="content">
+              <div class="board"></div>
+              <div class="buttons">
 
-    <div class="container">
+                    <button class="blackButton" onclick="changeColor('black')">
+                    Black
+                    </button>
 
-    </div>
-
-    <script>
-        const container = document.querySelector(".container");
-
-        function makeGrid() {
-        for (i = 0; i < 16; i++) { //makes 16 rows to create square grid
-            for (j = 0; j < 16; j++) { //makes a row of 16 boxes
-            const row = document.createElement("div");
-            container.appendChild(row);
-            row.textContent = `${i},${j}`
-            }
-        }
-        }
-        makeGrid();
-
-    </script>
-
-
-    
-</body>
+                    <button class="erasorButton" onclick="changeColor('white')">
+                    Eraser
+                    
+                    <button onclick="resetBoard()">Reset</button>
+              </div>
+              <div>
+                    <input 
+                    type="text" 
+                    placeholder="Size of Board" 
+                    value="16" 
+                    onchange = "changeSize(this.value)"
+                    />
+                    <button>Set Size</button>
+                    </div>
+                </div> 
+            </div>
+    </body>
+    <script src="script.js"></script>
 </html>
